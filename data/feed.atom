@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>shai-hulud-iocs — compromised package feed</title>
+  <id>https://github.com/davidalmeidac/shai-hulud-iocs</id>
+  <link href="https://github.com/davidalmeidac/shai-hulud-iocs"/>
+  <updated>2026-05-25T20:08:30Z</updated>
+  <author><name>davidalmeidac</name></author>
+
+  <entry>
+    <id>https://github.com/davidalmeidac/shai-hulud-iocs#npm:chalk-tempalte</id>
+    <title>npm:chalk-tempalte (*)</title>
+    <updated>2026-05-14T00:00:00Z</updated>
+    <summary>Severity: high. Campaigns: Shai-Hulud typosquat clone (of chalk-template). Sources: Mondoo.</summary>
+    <link href="https://github.com/davidalmeidac/shai-hulud-iocs/blob/main/data/compromised-packages.json"/>
+  </entry>
+  <entry>
+    <id>https://github.com/davidalmeidac/shai-hulud-iocs#npm:@mistralai/mistralai</id>
+    <title>npm:@mistralai/mistralai (2.2.3, 2.2.4, 2.2.2)</title>
+    <updated>2026-05-11T00:00:00Z</updated>
+    <summary>Severity: critical. Campaigns: Mini Shai-Hulud Mistral · OSV: Malicious code in @mistralai/mistralai (npm). Sources: TheHackerNews, OSV: MAL-2026-3432.</summary>
+    <link href="https://github.com/davidalmeidac/shai-hulud-iocs/blob/main/data/compromised-packages.json"/>
+  </entry>
+  <entry>
+    <id>https://github.com/davidalmeidac/shai-hulud-iocs#npm:@opensearch-project/opensearch</id>
+    <title>npm:@opensearch-project/opensearch (3.6.2, 3.5.3, 3.8.0, 3.7.0)</title>
+    <updated>2026-05-11T00:00:00Z</updated>
+    <summary>Severity: critical. Campaigns: Mini Shai-Hulud TanStack · OSV: Malicious code in @opensearch-project/opensearch (npm). Sources: Snyk, OSV: MAL-2026-3434.</summary>
+    <link href="https://github.com/davidalmeidac/shai-hulud-iocs/blob/main/data/compromised-packages.json"/>
+  </entry>
+  <entry>
+    <id>https://github.com/davidalmeidac/shai-hulud-iocs#npm:@tanstack/react-router</id>
+    <title>npm:@tanstack/react-router (1.169.5, 1.169.8)</title>
+    <updated>2026-05-11T00:00:00Z</updated>
+    <summary>Severity: critical. Campaigns: Mini Shai-Hulud TanStack · OSV: Malicious code in @tanstack/react-router (npm). Sources: Snyk, StepSecurity, OSV: MAL-2026-3465.</summary>
+    <link href="https://github.com/davidalmeidac/shai-hulud-iocs/blob/main/data/compromised-packages.json"/>
+  </entry>
+  <entry>
+    <id>https://github.com/davidalmeidac/shai-hulud-iocs#npm:@tanstack/router-core</id>
+    <title>npm:@tanstack/router-core (1.169.5, 1.169.8)</title>
+    <updated>2026-05-11T00:00:00Z</updated>
+    <summary>Severity: critical. Campaigns: Mini Shai-Hulud TanStack · OSV: Malicious code in @tanstack/router-core (npm). Sources: Snyk, OSV: MAL-2026-3473.</summary>
+    <link href="https://github.com/davidalmeidac/shai-hulud-iocs/blob/main/data/compromised-packages.json"/>
+  </entry>
+</feed>

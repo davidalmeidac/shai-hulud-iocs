@@ -1,0 +1,63 @@
+[
+  {
+    "ecosystem": "npm",
+    "name": "@tanstack/react-router",
+    "versions": ["1.169.5", "1.169.8"],
+    "campaign": "Mini Shai-Hulud TanStack",
+    "first_seen": "2026-05-11",
+    "severity": "critical",
+    "sources": ["Snyk", "StepSecurity"],
+    "references": [
+      "https://snyk.io/blog/tanstack-npm-packages-compromised/",
+      "https://www.stepsecurity.io/blog/mini-shai-hulud-is-back-a-self-spreading-supply-chain-attack-hits-the-npm-ecosystem"
+    ]
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@tanstack/router-core",
+    "versions": ["1.169.5", "1.169.8"],
+    "campaign": "Mini Shai-Hulud TanStack",
+    "first_seen": "2026-05-11",
+    "severity": "critical",
+    "sources": ["Snyk"],
+    "references": [
+      "https://snyk.io/blog/tanstack-npm-packages-compromised/"
+    ]
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@opensearch-project/opensearch",
+    "versions": ["3.6.2"],
+    "campaign": "Mini Shai-Hulud TanStack",
+    "first_seen": "2026-05-11",
+    "severity": "critical",
+    "sources": ["Snyk"],
+    "references": [
+      "https://snyk.io/blog/tanstack-npm-packages-compromised/"
+    ]
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@mistralai/mistralai",
+    "versions": ["2.2.3", "2.2.4"],
+    "campaign": "Mini Shai-Hulud Mistral",
+    "first_seen": "2026-05-11",
+    "severity": "critical",
+    "sources": ["TheHackerNews"],
+    "references": [
+      "https://thehackernews.com/2026/05/mini-shai-hulud-worm-compromises.html"
+    ]
+  },
+  {
+    "ecosystem": "npm",
+    "name": "chalk-tempalte",
+    "versions": ["*"],
+    "campaign": "Shai-Hulud typosquat clone (of chalk-template)",
+    "first_seen": "2026-05-14",
+    "severity": "high",
+    "sources": ["Mondoo"],
+    "references": [
+      "https://mondoo.com/blog/shai-hulud-clones-arrive-when-worm-source-code-goes-open-source"
+    ]
+  }
+]

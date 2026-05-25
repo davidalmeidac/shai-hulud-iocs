@@ -1,0 +1,134 @@
+{
+  "schema": "shai-hulud-iocs/v1",
+  "generated_at": "2026-05-25T20:08:30Z",
+  "total": 5,
+  "packages": [
+    {
+      "ecosystem": "npm",
+      "name": "@mistralai/mistralai",
+      "versions": [
+        "2.2.3",
+        "2.2.4",
+        "2.2.2"
+      ],
+      "campaigns": [
+        "Mini Shai-Hulud Mistral",
+        "OSV: Malicious code in @mistralai/mistralai (npm)"
+      ],
+      "first_seen": "2026-05-11",
+      "severity": "critical",
+      "sources": [
+        "TheHackerNews",
+        "OSV: MAL-2026-3432"
+      ],
+      "references": [
+        "https://thehackernews.com/2026/05/mini-shai-hulud-worm-compromises.html",
+        "https://github.com/advisories/GHSA-3q49-cfcf-g5fm",
+        "https://www.aikido.dev/blog/mini-shai-hulud-is-back-tanstack-compromised",
+        "https://www.stepsecurity.io/blog/mini-shai-hulud-is-back-a-self-spreading-supply-chain-attack-hits-the-npm-ecosystem",
+        "https://socket.dev/blog/tanstack-npm-packages-compromised-mini-shai-hulud-supply-chain-attack",
+        "https://tanstack.com/blog/npm-supply-chain-compromise-postmortem",
+        "https://snyk.io/blog/tanstack-npm-packages-compromised/"
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@opensearch-project/opensearch",
+      "versions": [
+        "3.6.2",
+        "3.5.3",
+        "3.8.0",
+        "3.7.0"
+      ],
+      "campaigns": [
+        "Mini Shai-Hulud TanStack",
+        "OSV: Malicious code in @opensearch-project/opensearch (npm)"
+      ],
+      "first_seen": "2026-05-11",
+      "severity": "critical",
+      "sources": [
+        "Snyk",
+        "OSV: MAL-2026-3434"
+      ],
+      "references": [
+        "https://snyk.io/blog/tanstack-npm-packages-compromised/",
+        "https://github.com/advisories/GHSA-298w-vvm4-ww55",
+        "https://www.aikido.dev/blog/mini-shai-hulud-is-back-tanstack-compromised",
+        "https://www.stepsecurity.io/blog/mini-shai-hulud-is-back-a-self-spreading-supply-chain-attack-hits-the-npm-ecosystem",
+        "https://socket.dev/blog/tanstack-npm-packages-compromised-mini-shai-hulud-supply-chain-attack",
+        "https://tanstack.com/blog/npm-supply-chain-compromise-postmortem"
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@tanstack/react-router",
+      "versions": [
+        "1.169.5",
+        "1.169.8"
+      ],
+      "campaigns": [
+        "Mini Shai-Hulud TanStack",
+        "OSV: Malicious code in @tanstack/react-router (npm)"
+      ],
+      "first_seen": "2026-05-11",
+      "severity": "critical",
+      "sources": [
+        "Snyk",
+        "StepSecurity",
+        "OSV: MAL-2026-3465"
+      ],
+      "references": [
+        "https://snyk.io/blog/tanstack-npm-packages-compromised/",
+        "https://www.stepsecurity.io/blog/mini-shai-hulud-is-back-a-self-spreading-supply-chain-attack-hits-the-npm-ecosystem",
+        "https://github.com/advisories/GHSA-5q7g-gw3w-r3rh",
+        "https://www.aikido.dev/blog/mini-shai-hulud-is-back-tanstack-compromised",
+        "https://socket.dev/blog/tanstack-npm-packages-compromised-mini-shai-hulud-supply-chain-attack",
+        "https://tanstack.com/blog/npm-supply-chain-compromise-postmortem"
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@tanstack/router-core",
+      "versions": [
+        "1.169.5",
+        "1.169.8"
+      ],
+      "campaigns": [
+        "Mini Shai-Hulud TanStack",
+        "OSV: Malicious code in @tanstack/router-core (npm)"
+      ],
+      "first_seen": "2026-05-11",
+      "severity": "critical",
+      "sources": [
+        "Snyk",
+        "OSV: MAL-2026-3473"
+      ],
+      "references": [
+        "https://snyk.io/blog/tanstack-npm-packages-compromised/",
+        "https://github.com/advisories/GHSA-r8f9-7pfq-w872",
+        "https://www.aikido.dev/blog/mini-shai-hulud-is-back-tanstack-compromised",
+        "https://www.stepsecurity.io/blog/mini-shai-hulud-is-back-a-self-spreading-supply-chain-attack-hits-the-npm-ecosystem",
+        "https://socket.dev/blog/tanstack-npm-packages-compromised-mini-shai-hulud-supply-chain-attack",
+        "https://tanstack.com/blog/npm-supply-chain-compromise-postmortem"
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "chalk-tempalte",
+      "versions": [
+        "*"
+      ],
+      "campaigns": [
+        "Shai-Hulud typosquat clone (of chalk-template)"
+      ],
+      "first_seen": "2026-05-14",
+      "severity": "high",
+      "sources": [
+        "Mondoo"
+      ],
+      "references": [
+        "https://mondoo.com/blog/shai-hulud-clones-arrive-when-worm-source-code-goes-open-source"
+      ]
+    }
+  ]
+}

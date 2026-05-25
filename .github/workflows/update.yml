@@ -1,0 +1,65 @@
+name: Update IOC feed
+
+# Daily cron at 06:00 UTC + on-demand + on every push to scripts/
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/update.yml'
+
+permissions:
+  contents: write   # to commit updated data/
+
+concurrency:
+  group: ioc-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run aggregator
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/update.py
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet data/ sources/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push if changed
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "shai-hulud-iocs-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/ sources/
+          STAMP=$(date -u +'%Y-%m-%d %H:%MZ')
+          git commit -m "chore(data): refresh IOC feed (${STAMP})"
+          git push
+
+      - name: Job summary
+        run: |
+          {
+            echo "## shai-hulud-iocs · update"
+            echo ""
+            TOTAL=$(python -c "import json,sys;d=json.load(open('data/compromised-packages.json'));print(d['total'])")
+            echo "- Total packages tracked: **$TOTAL**"
+            echo "- Changes committed: **${{ steps.diff.outputs.changed }}**"
+            echo "- Generated: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          } >> "$GITHUB_STEP_SUMMARY"

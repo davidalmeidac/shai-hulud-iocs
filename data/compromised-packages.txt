@@ -1,0 +1,12 @@
+npm:@mistralai/mistralai@2.2.2
+npm:@mistralai/mistralai@2.2.3
+npm:@mistralai/mistralai@2.2.4
+npm:@opensearch-project/opensearch@3.5.3
+npm:@opensearch-project/opensearch@3.6.2
+npm:@opensearch-project/opensearch@3.7.0
+npm:@opensearch-project/opensearch@3.8.0
+npm:@tanstack/react-router@1.169.5
+npm:@tanstack/react-router@1.169.8
+npm:@tanstack/router-core@1.169.5
+npm:@tanstack/router-core@1.169.8
+npm:chalk-tempalte@*

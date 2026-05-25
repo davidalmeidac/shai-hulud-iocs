@@ -1,1 +1,20 @@
-[]
+{
+  "errors": [
+    {
+      "path": [
+        "query"
+      ],
+      "extensions": {
+        "code": "variableNotUsed",
+        "variableName": "query"
+      },
+      "locations": [
+        {
+          "line": 1,
+          "column": 1
+        }
+      ],
+      "message": "Variable $query is declared by anonymous query but not used"
+    }
+  ]
+}

@@ -37,7 +37,7 @@ import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib import request as urlrequest, error as urlerror
+from urllib import request as urlrequest, error as urlerror, parse as urlparse
 from xml.sax.saxutils import escape as xml_escape
 
 HERE = Path(__file__).parent.parent
@@ -185,75 +185,69 @@ def _max_severity(severity_list: list[dict]) -> str:
 # SOURCE 3 — GitHub Security Advisories (GHSA)
 # ─────────────────────────────────────────────────────────────────────────────
 
-GHSA_QUERY = """
-query($query: String!, $first: Int!) {
-  securityAdvisories(
-    first: $first,
-    classifications: [GENERAL]
-  ) {
-    nodes {
-      ghsaId
-      summary
-      publishedAt
-      severity
-      identifiers { type value }
-      references { url }
-      vulnerabilities(first: 50) {
-        nodes {
-          package { name ecosystem }
-          vulnerableVersionRange
-        }
-      }
-    }
-  }
-}
-""".strip()
+GHSA_SEARCH_TERMS = ["shai-hulud", "tanstack supply chain", "antv supply chain"]
 
 
 def fetch_ghsa() -> list[dict]:
-    """Pull GitHub Security Advisories tagged or referencing Shai-Hulud.
+    """Pull GitHub Advisory DB entries via the REST API.
 
-    Requires GITHUB_TOKEN env var. Falls back silently if missing.
+    Uses the public Advisory Database REST endpoint which actually supports
+    text search via ?query=. GraphQL securityAdvisories has no text filter.
+
+    Auth optional but recommended (GITHUB_TOKEN raises the rate limit).
     """
     token = os.environ.get("GITHUB_TOKEN")
-    if not token:
-        print("  [!] GITHUB_TOKEN not set — skipping GHSA source.", file=sys.stderr)
-        (SOURCES_DIR / "ghsa.raw.json").write_text("[]", encoding="utf-8")
-        return []
+    headers = {"Accept": "application/vnd.github+json",
+               "X-GitHub-Api-Version": "2022-11-28"}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
 
+    all_raw = []
     out: list[dict] = []
-    try:
-        data = http_post(
-            "https://api.github.com/graphql",
-            {"query": GHSA_QUERY, "variables": {"query": "shai-hulud", "first": 100}},
-            headers={"Authorization": f"Bearer {token}"},
-            timeout=30,
-        )
-        parsed = json.loads(data)
-        (SOURCES_DIR / "ghsa.raw.json").write_text(
-            json.dumps(parsed, indent=2, ensure_ascii=False), encoding="utf-8"
-        )
-        for adv in (parsed.get("data", {}).get("securityAdvisories", {}).get("nodes") or []):
-            summary = (adv.get("summary") or "").lower()
-            if "shai-hulud" not in summary and "shai hulud" not in summary:
-                continue
-            refs = [r.get("url") for r in (adv.get("references") or []) if r.get("url")][:6]
-            for vuln in (adv.get("vulnerabilities", {}).get("nodes") or []):
-                pkg = vuln.get("package") or {}
-                if not pkg.get("name"):
+
+    for term in GHSA_SEARCH_TERMS:
+        try:
+            qs = urlparse.urlencode({
+                "type": "reviewed",
+                "per_page": 100,
+                "query": term,
+            })
+            url = f"https://api.github.com/advisories?{qs}"
+            data = http_get(url, headers=headers, timeout=30)
+            parsed = json.loads(data)
+            all_raw.append({"query": term, "count": len(parsed), "results": parsed})
+
+            for adv in parsed:
+                summary = (adv.get("summary") or "").lower()
+                description = (adv.get("description") or "").lower()
+                blob = summary + " " + description
+                if not any(kw in blob for kw in
+                           ["shai-hulud", "shai hulud", "supply chain compromise",
+                            "supply-chain compromise"]):
                     continue
-                out.append({
-                    "ecosystem": (pkg.get("ecosystem") or "").lower(),
-                    "name": pkg.get("name"),
-                    "versions": [vuln.get("vulnerableVersionRange") or "*"],
-                    "campaign": "GHSA: " + (adv.get("summary") or "")[:120],
-                    "first_seen": (adv.get("publishedAt") or "")[:10],
-                    "severity": (adv.get("severity") or "high").lower(),
-                    "sources": [f"GHSA: {adv.get('ghsaId', '?')}"],
-                    "references": refs,
-                })
-    except (urlerror.URLError, urlerror.HTTPError, TimeoutError) as e:
-        print(f"  [!] GHSA query failed: {e}", file=sys.stderr)
+                refs = [r for r in (adv.get("references") or []) if r][:6]
+                for vuln in (adv.get("vulnerabilities") or []):
+                    pkg = vuln.get("package") or {}
+                    if not pkg.get("name"):
+                        continue
+                    out.append({
+                        "ecosystem": (pkg.get("ecosystem") or "").lower(),
+                        "name": pkg.get("name"),
+                        "versions": [vuln.get("vulnerable_version_range") or "*"],
+                        "campaign": "GHSA: " + (adv.get("summary") or "")[:120],
+                        "first_seen": (adv.get("published_at") or "")[:10],
+                        "severity": (adv.get("severity") or "high").lower(),
+                        "sources": [f"GHSA: {adv.get('ghsa_id', '?')}"],
+                        "references": refs,
+                    })
+            time.sleep(0.5)  # be nice to the API
+        except (urlerror.URLError, urlerror.HTTPError, TimeoutError) as e:
+            print(f"  [!] GHSA search '{term}' failed: {e}", file=sys.stderr)
+            continue
+
+    (SOURCES_DIR / "ghsa.raw.json").write_text(
+        json.dumps(all_raw, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
     return out
 
 

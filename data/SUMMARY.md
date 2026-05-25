@@ -1,6 +1,6 @@
 # Compromised packages — summary
 
-> Generated: `2026-05-25T20:22:17Z` · Total: **8** unique packages
+> Generated: `2026-05-25T20:23:15Z` · Total: **8** unique packages
 
 Machine-readable feed: [`compromised-packages.json`](compromised-packages.json) · 
 [`compromised-packages.csv`](compromised-packages.csv) · 

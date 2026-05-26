@@ -1,6 +1,6 @@
 # Compromised packages — summary
 
-> Generated: `2026-05-25T20:23:15Z` · Total: **8** unique packages
+> Generated: `2026-05-26T09:57:19Z` · Total: **8** unique packages
 
 Machine-readable feed: [`compromised-packages.json`](compromised-packages.json) · 
 [`compromised-packages.csv`](compromised-packages.csv) · 
@@ -18,4 +18,4 @@ Machine-readable feed: [`compromised-packages.json`](compromised-packages.json) 
 | `@opensearch-project/opensearch` | `3.6.2`<br>`3.5.3`<br>`3.8.0`<br>`3.7.0` | critical | 2026-05-11 | Snyk, OSV: MAL-2026-3434 |
 | `@tanstack/react-router` | `1.169.5`<br>`1.169.8` | critical | 2026-05-11 | Snyk, StepSecurity, OSV: MAL-2026-3465 |
 | `@tanstack/router-core` | `1.169.5`<br>`1.169.8` | critical | 2026-05-11 | Snyk, OSV: MAL-2026-3473 |
-| `chalk-tempalte` | `*` | high | 2026-05-14 | Mondoo |
+| `chalk-tempalte` | `*`<br>`1.0.15`<br>`1.0.16`<br>`1.0.14`<br>`1.0.17` | high | 2026-05-14 | Mondoo, OSV: MAL-2026-4517 |

@@ -3,7 +3,7 @@
   <title>shai-hulud-iocs — compromised package feed</title>
   <id>https://github.com/davidalmeidac/shai-hulud-iocs</id>
   <link href="https://github.com/davidalmeidac/shai-hulud-iocs"/>
-  <updated>2026-05-25T20:23:15Z</updated>
+  <updated>2026-05-26T09:57:19Z</updated>
   <author><name>davidalmeidac</name></author>
 
   <entry>
@@ -29,9 +29,9 @@
   </entry>
   <entry>
     <id>https://github.com/davidalmeidac/shai-hulud-iocs#npm:chalk-tempalte</id>
-    <title>npm:chalk-tempalte (*)</title>
+    <title>npm:chalk-tempalte (*, 1.0.15, 1.0.16, 1.0.14, 1.0.17, 1.0.19, 1.0.20)</title>
     <updated>2026-05-14T00:00:00Z</updated>
-    <summary>Severity: high. Campaigns: Shai-Hulud typosquat clone (of chalk-template). Sources: Mondoo.</summary>
+    <summary>Severity: high. Campaigns: Shai-Hulud typosquat clone (of chalk-template) · OSV: Malicious code in chalk-tempalte (npm). Sources: Mondoo, OSV: MAL-2026-4517.</summary>
     <link href="https://github.com/davidalmeidac/shai-hulud-iocs/blob/main/data/compromised-packages.json"/>
   </entry>
   <entry>

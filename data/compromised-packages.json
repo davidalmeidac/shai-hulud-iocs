@@ -1,6 +1,6 @@
 {
   "schema": "shai-hulud-iocs/v1",
-  "generated_at": "2026-05-25T20:23:15Z",
+  "generated_at": "2026-05-26T09:57:19Z",
   "total": 8,
   "packages": [
     {
@@ -182,18 +182,32 @@
       "ecosystem": "npm",
       "name": "chalk-tempalte",
       "versions": [
-        "*"
+        "*",
+        "1.0.15",
+        "1.0.16",
+        "1.0.14",
+        "1.0.17",
+        "1.0.19",
+        "1.0.20"
       ],
       "campaigns": [
-        "Shai-Hulud typosquat clone (of chalk-template)"
+        "Shai-Hulud typosquat clone (of chalk-template)",
+        "OSV: Malicious code in chalk-tempalte (npm)"
       ],
       "first_seen": "2026-05-14",
       "severity": "high",
       "sources": [
-        "Mondoo"
+        "Mondoo",
+        "OSV: MAL-2026-4517"
       ],
       "references": [
-        "https://mondoo.com/blog/shai-hulud-clones-arrive-when-worm-source-code-goes-open-source"
+        "https://mondoo.com/blog/shai-hulud-clones-arrive-when-worm-source-code-goes-open-source",
+        "https://www.npmjs.com/package/chalk-tempalte/v/1.0.17",
+        "https://www.npmjs.com/package/chalk-tempalte/v/1.0.19",
+        "https://www.npmjs.com/package/chalk-tempalte/v/1.0.16",
+        "https://www.npmjs.com/package/chalk-tempalte/v/1.0.20",
+        "https://www.npmjs.com/package/chalk-tempalte/v/1.0.15",
+        "https://www.npmjs.com/package/chalk-tempalte/v/1.0.14"
       ]
     }
   ]

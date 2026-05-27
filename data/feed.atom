@@ -3,30 +3,9 @@
   <title>shai-hulud-iocs — compromised package feed</title>
   <id>https://github.com/davidalmeidac/shai-hulud-iocs</id>
   <link href="https://github.com/davidalmeidac/shai-hulud-iocs"/>
-  <updated>2026-05-26T09:57:19Z</updated>
+  <updated>2026-05-27T09:50:42Z</updated>
   <author><name>davidalmeidac</name></author>
 
-  <entry>
-    <id>https://github.com/davidalmeidac/shai-hulud-iocs#npm:@cap-js/db-service</id>
-    <title>npm:@cap-js/db-service (= 2.10.1)</title>
-    <updated>2026-05-20T00:00:00Z</updated>
-    <summary>Severity: critical. Campaigns: GHSA:  Supply chain compromise via malicious package versions (@cap-js/sqlite,  @cap-js/postgres, @cap-js/db-service). Sources: GHSA: GHSA-pvw4-cvr4-97p8.</summary>
-    <link href="https://github.com/davidalmeidac/shai-hulud-iocs/blob/main/data/compromised-packages.json"/>
-  </entry>
-  <entry>
-    <id>https://github.com/davidalmeidac/shai-hulud-iocs#npm:@cap-js/postgres</id>
-    <title>npm:@cap-js/postgres (= 2.2.2)</title>
-    <updated>2026-05-20T00:00:00Z</updated>
-    <summary>Severity: critical. Campaigns: GHSA:  Supply chain compromise via malicious package versions (@cap-js/sqlite,  @cap-js/postgres, @cap-js/db-service). Sources: GHSA: GHSA-pvw4-cvr4-97p8.</summary>
-    <link href="https://github.com/davidalmeidac/shai-hulud-iocs/blob/main/data/compromised-packages.json"/>
-  </entry>
-  <entry>
-    <id>https://github.com/davidalmeidac/shai-hulud-iocs#npm:@cap-js/sqlite</id>
-    <title>npm:@cap-js/sqlite (= 2.2.2)</title>
-    <updated>2026-05-20T00:00:00Z</updated>
-    <summary>Severity: critical. Campaigns: GHSA:  Supply chain compromise via malicious package versions (@cap-js/sqlite,  @cap-js/postgres, @cap-js/db-service). Sources: GHSA: GHSA-pvw4-cvr4-97p8.</summary>
-    <link href="https://github.com/davidalmeidac/shai-hulud-iocs/blob/main/data/compromised-packages.json"/>
-  </entry>
   <entry>
     <id>https://github.com/davidalmeidac/shai-hulud-iocs#npm:chalk-tempalte</id>
     <title>npm:chalk-tempalte (*, 1.0.15, 1.0.16, 1.0.14, 1.0.17, 1.0.19, 1.0.20)</title>

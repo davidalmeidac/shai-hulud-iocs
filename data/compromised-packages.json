@@ -1,74 +1,8 @@
 {
   "schema": "shai-hulud-iocs/v1",
-  "generated_at": "2026-05-26T09:57:19Z",
-  "total": 8,
+  "generated_at": "2026-05-27T09:50:42Z",
+  "total": 5,
   "packages": [
-    {
-      "ecosystem": "npm",
-      "name": "@cap-js/db-service",
-      "versions": [
-        "= 2.10.1"
-      ],
-      "campaigns": [
-        "GHSA:  Supply chain compromise via malicious package versions (@cap-js/sqlite,  @cap-js/postgres, @cap-js/db-service)"
-      ],
-      "first_seen": "2026-05-20",
-      "severity": "critical",
-      "sources": [
-        "GHSA: GHSA-pvw4-cvr4-97p8"
-      ],
-      "references": [
-        "https://github.com/cap-js/cds-dbs/security/advisories/GHSA-pvw4-cvr4-97p8",
-        "https://me.sap.com/notes/3747787",
-        "https://www.sap.com/documents/2026/05/8203a8b9-4d7f-0010-bca6-c68f7e60039b.html",
-        "https://www.stepsecurity.io/blog/a-mini-shai-hulud-has-appeared",
-        "https://github.com/advisories/GHSA-pvw4-cvr4-97p8"
-      ]
-    },
-    {
-      "ecosystem": "npm",
-      "name": "@cap-js/postgres",
-      "versions": [
-        "= 2.2.2"
-      ],
-      "campaigns": [
-        "GHSA:  Supply chain compromise via malicious package versions (@cap-js/sqlite,  @cap-js/postgres, @cap-js/db-service)"
-      ],
-      "first_seen": "2026-05-20",
-      "severity": "critical",
-      "sources": [
-        "GHSA: GHSA-pvw4-cvr4-97p8"
-      ],
-      "references": [
-        "https://github.com/cap-js/cds-dbs/security/advisories/GHSA-pvw4-cvr4-97p8",
-        "https://me.sap.com/notes/3747787",
-        "https://www.sap.com/documents/2026/05/8203a8b9-4d7f-0010-bca6-c68f7e60039b.html",
-        "https://www.stepsecurity.io/blog/a-mini-shai-hulud-has-appeared",
-        "https://github.com/advisories/GHSA-pvw4-cvr4-97p8"
-      ]
-    },
-    {
-      "ecosystem": "npm",
-      "name": "@cap-js/sqlite",
-      "versions": [
-        "= 2.2.2"
-      ],
-      "campaigns": [
-        "GHSA:  Supply chain compromise via malicious package versions (@cap-js/sqlite,  @cap-js/postgres, @cap-js/db-service)"
-      ],
-      "first_seen": "2026-05-20",
-      "severity": "critical",
-      "sources": [
-        "GHSA: GHSA-pvw4-cvr4-97p8"
-      ],
-      "references": [
-        "https://github.com/cap-js/cds-dbs/security/advisories/GHSA-pvw4-cvr4-97p8",
-        "https://me.sap.com/notes/3747787",
-        "https://www.sap.com/documents/2026/05/8203a8b9-4d7f-0010-bca6-c68f7e60039b.html",
-        "https://www.stepsecurity.io/blog/a-mini-shai-hulud-has-appeared",
-        "https://github.com/advisories/GHSA-pvw4-cvr4-97p8"
-      ]
-    },
     {
       "ecosystem": "npm",
       "name": "@mistralai/mistralai",

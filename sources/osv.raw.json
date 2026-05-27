@@ -16,13 +16,13 @@
           "modified": "2026-05-13T16:38:08.562085Z",
           "published": "2026-05-12T00:12:49Z",
           "database_specific": {
-            "github_reviewed_at": "2026-05-12T00:12:49Z",
             "nvd_published_at": "2026-05-12T01:16:46Z",
             "cwe_ids": [
               "CWE-506"
             ],
-            "github_reviewed": true,
-            "severity": "CRITICAL"
+            "severity": "CRITICAL",
+            "github_reviewed_at": "2026-05-12T00:12:49Z",
+            "github_reviewed": true
           },
           "references": [
             {
@@ -2258,28 +2258,6 @@
           "modified": "2026-05-12T07:09:29.153799Z",
           "published": "2026-05-11T23:44:35Z",
           "database_specific": {
-            "malicious-packages-origins": [
-              {
-                "import_time": "2026-05-12T01:08:51.45897714Z",
-                "source": "ghsa-malware",
-                "id": "GHSA-5q7g-gw3w-r3rh",
-                "versions": [
-                  "1.169.8",
-                  "1.169.5"
-                ],
-                "modified_time": "2026-05-11T23:44:35Z",
-                "sha256": "b329cb477cc0d977f9e8e6df59072ea002d6d041b99531596fbd87b8ff80aefd"
-              },
-              {
-                "import_time": "2026-05-12T06:23:00.48559Z",
-                "source": "google-open-source-security",
-                "versions": [
-                  "0.10.1"
-                ],
-                "modified_time": "2026-05-12T06:19:26Z",
-                "sha256": "5e1924464368f0c5816ee84e000cc47017f44045140feafbbc9e685d847ed5a5"
-              }
-            ],
             "iocs": {
               "domains": [
                 "git-tanstack.com",
@@ -2287,7 +2265,29 @@
                 "api.masscan.cloud",
                 "seed1.getsession.org"
               ]
-            }
+            },
+            "malicious-packages-origins": [
+              {
+                "source": "ghsa-malware",
+                "id": "GHSA-5q7g-gw3w-r3rh",
+                "import_time": "2026-05-12T01:08:51.45897714Z",
+                "modified_time": "2026-05-11T23:44:35Z",
+                "sha256": "b329cb477cc0d977f9e8e6df59072ea002d6d041b99531596fbd87b8ff80aefd",
+                "versions": [
+                  "1.169.8",
+                  "1.169.5"
+                ]
+              },
+              {
+                "source": "google-open-source-security",
+                "import_time": "2026-05-12T06:23:00.48559Z",
+                "modified_time": "2026-05-12T06:19:26Z",
+                "sha256": "5e1924464368f0c5816ee84e000cc47017f44045140feafbbc9e685d847ed5a5",
+                "versions": [
+                  "0.10.1"
+                ]
+              }
+            ]
           },
           "references": [
             {
@@ -2327,14 +2327,14 @@
                 "1.169.5"
               ],
               "database_specific": {
-                "source": "https://github.com/ossf/malicious-packages/blob/main/osv/malicious/npm/@tanstack/react-router/MAL-2026-3465.json",
                 "cwes": [
                   {
-                    "description": "The product contains code that appears to be malicious in nature.",
+                    "name": "Embedded Malicious Code",
                     "cweId": "CWE-506",
-                    "name": "Embedded Malicious Code"
+                    "description": "The product contains code that appears to be malicious in nature."
                   }
-                ]
+                ],
+                "source": "https://github.com/ossf/malicious-packages/blob/main/osv/malicious/npm/@tanstack/react-router/MAL-2026-3465.json"
               }
             }
           ],
@@ -2360,13 +2360,13 @@
           "modified": "2026-05-13T16:38:08.562085Z",
           "published": "2026-05-12T00:12:49Z",
           "database_specific": {
+            "github_reviewed": true,
             "cwe_ids": [
               "CWE-506"
             ],
             "github_reviewed_at": "2026-05-12T00:12:49Z",
-            "github_reviewed": true,
-            "nvd_published_at": "2026-05-12T01:16:46Z",
-            "severity": "CRITICAL"
+            "severity": "CRITICAL",
+            "nvd_published_at": "2026-05-12T01:16:46Z"
           },
           "references": [
             {
@@ -4604,24 +4604,24 @@
           "database_specific": {
             "malicious-packages-origins": [
               {
+                "id": "GHSA-r8f9-7pfq-w872",
+                "modified_time": "2026-05-11T23:55:52Z",
+                "import_time": "2026-05-12T01:08:51.486468332Z",
                 "versions": [
                   "1.169.8",
                   "1.169.5"
                 ],
-                "id": "GHSA-r8f9-7pfq-w872",
-                "modified_time": "2026-05-11T23:55:52Z",
-                "sha256": "bbe10ec33a8ef57cbee1293be08884f598f604cc51b69f3eed2d17217efd462d",
                 "source": "ghsa-malware",
-                "import_time": "2026-05-12T01:08:51.486468332Z"
+                "sha256": "bbe10ec33a8ef57cbee1293be08884f598f604cc51b69f3eed2d17217efd462d"
               },
               {
+                "modified_time": "2026-05-12T06:19:26Z",
+                "import_time": "2026-05-12T06:23:00.48559Z",
                 "versions": [
                   "0.10.1"
                 ],
-                "modified_time": "2026-05-12T06:19:26Z",
-                "sha256": "5e1924464368f0c5816ee84e000cc47017f44045140feafbbc9e685d847ed5a5",
                 "source": "google-open-source-security",
-                "import_time": "2026-05-12T06:23:00.48559Z"
+                "sha256": "5e1924464368f0c5816ee84e000cc47017f44045140feafbbc9e685d847ed5a5"
               }
             ],
             "iocs": {
@@ -4673,8 +4673,8 @@
               "database_specific": {
                 "cwes": [
                   {
-                    "name": "Embedded Malicious Code",
                     "cweId": "CWE-506",
+                    "name": "Embedded Malicious Code",
                     "description": "The product contains code that appears to be malicious in nature."
                   }
                 ],
@@ -4701,13 +4701,13 @@
           "modified": "2026-05-19T14:45:16.289169752Z",
           "published": "2026-05-19T14:35:05Z",
           "database_specific": {
-            "github_reviewed_at": "2026-05-19T14:35:05Z",
             "nvd_published_at": null,
-            "severity": "CRITICAL",
+            "github_reviewed": true,
+            "github_reviewed_at": "2026-05-19T14:35:05Z",
             "cwe_ids": [
               "CWE-506"
             ],
-            "github_reviewed": true
+            "severity": "CRITICAL"
           },
           "references": [
             {
@@ -4801,45 +4801,45 @@
             },
             "malicious-packages-origins": [
               {
-                "import_time": "2026-05-12T01:08:51.444217859Z",
                 "modified_time": "2026-05-12T00:42:08Z",
                 "sha256": "bc9446e1580e90011f7691e3f05331e3df74d06312cebfd3f413f996ac9e5a55",
-                "source": "ghsa-malware",
+                "import_time": "2026-05-12T01:08:51.444217859Z",
                 "versions": [
                   "3.6.2"
                 ],
+                "source": "ghsa-malware",
                 "id": "GHSA-298w-vvm4-ww55"
               },
               {
-                "import_time": "2026-05-12T03:24:05.845288034Z",
                 "modified_time": "2026-05-12T02:37:15Z",
                 "sha256": "6c22989c0db8d85970948ed448b645259f408e6f3205b3acbea2138fffbacecc",
-                "source": "ghsa-malware",
+                "import_time": "2026-05-12T03:24:05.845288034Z",
                 "versions": [
                   "3.5.3",
                   "3.8.0",
                   "3.7.0",
                   "3.6.2"
                 ],
+                "source": "ghsa-malware",
                 "id": "GHSA-298w-vvm4-ww55"
               },
               {
-                "import_time": "2026-05-12T06:23:00.48559Z",
                 "modified_time": "2026-05-12T06:19:26Z",
                 "sha256": "5e1924464368f0c5816ee84e000cc47017f44045140feafbbc9e685d847ed5a5",
-                "source": "google-open-source-security",
+                "import_time": "2026-05-12T06:23:00.48559Z",
                 "versions": [
                   "0.10.1"
-                ]
+                ],
+                "source": "google-open-source-security"
               },
               {
-                "import_time": "2026-05-12T07:28:58.958809885Z",
                 "modified_time": "2026-05-12T06:53:21Z",
                 "sha256": "1668370f4091d14b4e74ad0e9b25c70ccbc5bf7fb7d97f535212ce2289e71347",
-                "source": "amazon-inspector",
+                "import_time": "2026-05-12T07:28:58.958809885Z",
                 "versions": [
                   "3.6.2"
-                ]
+                ],
+                "source": "amazon-inspector"
               }
             ]
           },
@@ -4885,14 +4885,14 @@
               "database_specific": {
                 "cwes": [
                   {
-                    "name": "Embedded Malicious Code",
+                    "description": "The product contains code that appears to be malicious in nature.",
                     "cweId": "CWE-506",
-                    "description": "The product contains code that appears to be malicious in nature."
+                    "name": "Embedded Malicious Code"
                   },
                   {
-                    "name": "Embedded Malicious Code",
+                    "description": "The product contains code that appears to be malicious in nature.",
                     "cweId": "CWE-506",
-                    "description": "The product contains code that appears to be malicious in nature."
+                    "name": "Embedded Malicious Code"
                   }
                 ],
                 "source": "https://github.com/ossf/malicious-packages/blob/main/osv/malicious/npm/@opensearch-project/opensearch/MAL-2026-3434.json"
@@ -4927,13 +4927,13 @@
           "modified": "2026-05-18T18:01:31.293350Z",
           "published": "2026-05-18T17:55:53Z",
           "database_specific": {
-            "github_reviewed_at": "2026-05-18T17:55:53Z",
-            "nvd_published_at": null,
+            "github_reviewed": true,
             "cwe_ids": [
               "CWE-506"
             ],
-            "github_reviewed": true,
-            "severity": "LOW"
+            "severity": "LOW",
+            "nvd_published_at": null,
+            "github_reviewed_at": "2026-05-18T17:55:53Z"
           },
           "references": [
             {
@@ -5082,6 +5082,74 @@
           "modified": "2026-05-18T01:02:38.604476Z",
           "published": "2026-05-11T23:00:35Z",
           "database_specific": {
+            "malicious-packages-origins": [
+              {
+                "source": "ghsa-malware",
+                "id": "GHSA-3q49-cfcf-g5fm",
+                "import_time": "2026-05-11T23:35:16.271235761Z",
+                "sha256": "dcf2132407f8778c7495e43c1e0891373066ccd550d4af3c2dfc8e19b8b84b56",
+                "versions": [
+                  "2.2.4",
+                  "2.2.3",
+                  "2.2.2"
+                ],
+                "modified_time": "2026-05-11T23:04:41Z"
+              },
+              {
+                "source": "ghsa-malware",
+                "id": "GHSA-3q49-cfcf-g5fm",
+                "ranges": [
+                  {
+                    "type": "SEMVER",
+                    "events": [
+                      {
+                        "introduced": "0"
+                      }
+                    ]
+                  }
+                ],
+                "import_time": "2026-05-12T01:08:51.454429056Z",
+                "sha256": "0f23c44999cf920fc4d7fe1b3fa78d3e6e64155b1123d395c0df38844c8cfad2",
+                "versions": [
+                  "2.2.4",
+                  "2.2.3",
+                  "2.2.2"
+                ],
+                "modified_time": "2026-05-12T00:28:13Z"
+              },
+              {
+                "source": "google-open-source-security",
+                "import_time": "2026-05-12T06:23:00.48559Z",
+                "sha256": "5e1924464368f0c5816ee84e000cc47017f44045140feafbbc9e685d847ed5a5",
+                "versions": [
+                  "0.10.1"
+                ],
+                "modified_time": "2026-05-12T06:19:26Z"
+              },
+              {
+                "source": "amazon-inspector",
+                "import_time": "2026-05-12T07:28:47.875813319Z",
+                "sha256": "23235945a2d68899f5fe2e6eafaefa0a98f2120697d41a40d26615e41aceb916",
+                "versions": [
+                  "2.2.4",
+                  "2.2.3",
+                  "2.2.2"
+                ],
+                "modified_time": "2026-05-12T06:53:21Z"
+              },
+              {
+                "source": "ghsa-malware",
+                "id": "GHSA-3q49-cfcf-g5fm",
+                "import_time": "2026-05-12T13:55:45.563561566Z",
+                "sha256": "402f67b2439efd7a3fd22f94c22fe8d9ef3396cc2a9cc2cd9532f50c18a3a79b",
+                "versions": [
+                  "2.2.4",
+                  "2.2.3",
+                  "2.2.2"
+                ],
+                "modified_time": "2026-05-12T13:18:47Z"
+              }
+            ],
             "iocs": {
               "domains": [
                 "git-tanstack.com",
@@ -5089,75 +5157,7 @@
                 "api.masscan.cloud",
                 "seed1.getsession.org"
               ]
-            },
-            "malicious-packages-origins": [
-              {
-                "id": "GHSA-3q49-cfcf-g5fm",
-                "versions": [
-                  "2.2.4",
-                  "2.2.3",
-                  "2.2.2"
-                ],
-                "import_time": "2026-05-11T23:35:16.271235761Z",
-                "source": "ghsa-malware",
-                "modified_time": "2026-05-11T23:04:41Z",
-                "sha256": "dcf2132407f8778c7495e43c1e0891373066ccd550d4af3c2dfc8e19b8b84b56"
-              },
-              {
-                "id": "GHSA-3q49-cfcf-g5fm",
-                "versions": [
-                  "2.2.4",
-                  "2.2.3",
-                  "2.2.2"
-                ],
-                "import_time": "2026-05-12T01:08:51.454429056Z",
-                "sha256": "0f23c44999cf920fc4d7fe1b3fa78d3e6e64155b1123d395c0df38844c8cfad2",
-                "source": "ghsa-malware",
-                "modified_time": "2026-05-12T00:28:13Z",
-                "ranges": [
-                  {
-                    "events": [
-                      {
-                        "introduced": "0"
-                      }
-                    ],
-                    "type": "SEMVER"
-                  }
-                ]
-              },
-              {
-                "import_time": "2026-05-12T06:23:00.48559Z",
-                "versions": [
-                  "0.10.1"
-                ],
-                "source": "google-open-source-security",
-                "modified_time": "2026-05-12T06:19:26Z",
-                "sha256": "5e1924464368f0c5816ee84e000cc47017f44045140feafbbc9e685d847ed5a5"
-              },
-              {
-                "import_time": "2026-05-12T07:28:47.875813319Z",
-                "versions": [
-                  "2.2.4",
-                  "2.2.3",
-                  "2.2.2"
-                ],
-                "source": "amazon-inspector",
-                "modified_time": "2026-05-12T06:53:21Z",
-                "sha256": "23235945a2d68899f5fe2e6eafaefa0a98f2120697d41a40d26615e41aceb916"
-              },
-              {
-                "id": "GHSA-3q49-cfcf-g5fm",
-                "versions": [
-                  "2.2.4",
-                  "2.2.3",
-                  "2.2.2"
-                ],
-                "import_time": "2026-05-12T13:55:45.563561566Z",
-                "source": "ghsa-malware",
-                "modified_time": "2026-05-12T13:18:47Z",
-                "sha256": "402f67b2439efd7a3fd22f94c22fe8d9ef3396cc2a9cc2cd9532f50c18a3a79b"
-              }
-            ]
+            }
           },
           "references": [
             {
@@ -5206,14 +5206,14 @@
                 "2.2.2"
               ],
               "database_specific": {
-                "source": "https://github.com/ossf/malicious-packages/blob/main/osv/malicious/npm/@mistralai/mistralai/MAL-2026-3432.json",
                 "cwes": [
                   {
+                    "description": "The product contains code that appears to be malicious in nature.",
                     "cweId": "CWE-506",
-                    "name": "Embedded Malicious Code",
-                    "description": "The product contains code that appears to be malicious in nature."
+                    "name": "Embedded Malicious Code"
                   }
-                ]
+                ],
+                "source": "https://github.com/ossf/malicious-packages/blob/main/osv/malicious/npm/@mistralai/mistralai/MAL-2026-3432.json"
               }
             }
           ],
@@ -5247,104 +5247,104 @@
           "database_specific": {
             "malicious-packages-origins": [
               {
-                "versions": [
-                  "1.0.15"
-                ],
-                "id": "IN-MAL-2026-003421",
                 "modified_time": "2026-05-20T02:32:48Z",
                 "sha256": "0dbbedbc9885ab0402df3ea58ad1e3efbe33154089e167af2a7493174fa8168a",
+                "id": "IN-MAL-2026-003421",
+                "import_time": "2026-05-26T05:50:36.703635173Z",
                 "source": "amazon-inspector",
-                "import_time": "2026-05-26T05:50:36.703635173Z"
-              },
-              {
-                "versions": [
-                  "1.0.16"
-                ],
-                "sha256": "1b46901047e08017bf0dd3a8edddd3b5b41b2bfc568487dd4420e37b07fb2b58",
-                "modified_time": "2026-05-20T02:21:45Z",
-                "id": "IN-MAL-2026-003409",
-                "source": "amazon-inspector",
-                "import_time": "2026-05-26T05:50:35.388926785Z"
-              },
-              {
-                "versions": [
-                  "1.0.14"
-                ],
-                "id": "IN-MAL-2026-003411",
-                "modified_time": "2026-05-20T02:22:40Z",
-                "sha256": "1b69dc559752cb056e834f5687f268e935b373bbe24c3499738601be672f87f9",
-                "source": "amazon-inspector",
-                "import_time": "2026-05-26T05:50:35.678873968Z"
-              },
-              {
-                "versions": [
-                  "1.0.17"
-                ],
-                "id": "IN-MAL-2026-003414",
-                "modified_time": "2026-05-20T02:27:06Z",
-                "sha256": "b61844f5e8edacf86401cbc715ec84fae400cc29417b3c10993d3e1314ce13ff",
-                "source": "amazon-inspector",
-                "import_time": "2026-05-26T05:50:35.985579113Z"
-              },
-              {
-                "versions": [
-                  "1.0.19"
-                ],
-                "sha256": "d3e82f6fa2867575be5e57fd3b03dada6a93761c97b240f77f98f4b221bde7a7",
-                "modified_time": "2026-05-20T02:07:31Z",
-                "id": "IN-MAL-2026-003393",
-                "source": "amazon-inspector",
-                "import_time": "2026-05-26T05:50:33.402887211Z"
-              },
-              {
-                "versions": [
-                  "1.0.16"
-                ],
-                "id": "IN-MAL-2026-003408",
-                "modified_time": "2026-05-20T02:21:44Z",
-                "sha256": "ec649aaa3ddfd4426b0b4076c10d98e3caac8efdee798007423b49a89cff2d15",
-                "source": "amazon-inspector",
-                "import_time": "2026-05-26T05:50:35.279050957Z"
-              },
-              {
-                "versions": [
-                  "1.0.20"
-                ],
-                "sha256": "788cdc2d5da13ef256deec3bef835fef1f62c28ae9ae77606677951f615dba12",
-                "modified_time": "2026-05-20T18:45:16Z",
-                "id": "IN-MAL-2026-003592",
-                "source": "amazon-inspector",
-                "import_time": "2026-05-26T05:50:55.34748867Z"
-              },
-              {
                 "versions": [
                   "1.0.15"
-                ],
-                "sha256": "a50750faf25ea435dbed1d83e0bb3ae9bcad627770fcbe1213fcde2c5e168d86",
-                "modified_time": "2026-05-20T02:32:48Z",
-                "id": "IN-MAL-2026-003420",
-                "source": "amazon-inspector",
-                "import_time": "2026-05-26T05:50:36.602438299Z"
+                ]
               },
               {
+                "sha256": "1b46901047e08017bf0dd3a8edddd3b5b41b2bfc568487dd4420e37b07fb2b58",
+                "versions": [
+                  "1.0.16"
+                ],
+                "id": "IN-MAL-2026-003409",
+                "import_time": "2026-05-26T05:50:35.388926785Z",
+                "source": "amazon-inspector",
+                "modified_time": "2026-05-20T02:21:45Z"
+              },
+              {
+                "modified_time": "2026-05-20T02:22:40Z",
+                "sha256": "1b69dc559752cb056e834f5687f268e935b373bbe24c3499738601be672f87f9",
+                "id": "IN-MAL-2026-003411",
+                "import_time": "2026-05-26T05:50:35.678873968Z",
+                "source": "amazon-inspector",
                 "versions": [
                   "1.0.14"
-                ],
-                "sha256": "c0ffe3887c093cd245be6407cffd38d98851d4c4aaae87dad81a0cbf9376e8a4",
-                "modified_time": "2026-05-20T02:22:40Z",
-                "id": "IN-MAL-2026-003410",
-                "source": "amazon-inspector",
-                "import_time": "2026-05-26T05:50:35.552335864Z"
+                ]
               },
               {
                 "versions": [
                   "1.0.17"
                 ],
-                "sha256": "de2bc8855ed757642753f9c434aaf3a48b1a8806176970046b851433c66ba154",
                 "modified_time": "2026-05-20T02:27:06Z",
+                "id": "IN-MAL-2026-003414",
+                "import_time": "2026-05-26T05:50:35.985579113Z",
+                "source": "amazon-inspector",
+                "sha256": "b61844f5e8edacf86401cbc715ec84fae400cc29417b3c10993d3e1314ce13ff"
+              },
+              {
+                "modified_time": "2026-05-20T02:07:31Z",
+                "sha256": "d3e82f6fa2867575be5e57fd3b03dada6a93761c97b240f77f98f4b221bde7a7",
+                "import_time": "2026-05-26T05:50:33.402887211Z",
+                "id": "IN-MAL-2026-003393",
+                "source": "amazon-inspector",
+                "versions": [
+                  "1.0.19"
+                ]
+              },
+              {
+                "modified_time": "2026-05-20T02:21:44Z",
+                "sha256": "ec649aaa3ddfd4426b0b4076c10d98e3caac8efdee798007423b49a89cff2d15",
+                "id": "IN-MAL-2026-003408",
+                "import_time": "2026-05-26T05:50:35.279050957Z",
+                "source": "amazon-inspector",
+                "versions": [
+                  "1.0.16"
+                ]
+              },
+              {
+                "modified_time": "2026-05-20T18:45:16Z",
+                "sha256": "788cdc2d5da13ef256deec3bef835fef1f62c28ae9ae77606677951f615dba12",
+                "import_time": "2026-05-26T05:50:55.34748867Z",
+                "id": "IN-MAL-2026-003592",
+                "source": "amazon-inspector",
+                "versions": [
+                  "1.0.20"
+                ]
+              },
+              {
+                "modified_time": "2026-05-20T02:32:48Z",
+                "sha256": "a50750faf25ea435dbed1d83e0bb3ae9bcad627770fcbe1213fcde2c5e168d86",
+                "id": "IN-MAL-2026-003420",
+                "import_time": "2026-05-26T05:50:36.602438299Z",
+                "source": "amazon-inspector",
+                "versions": [
+                  "1.0.15"
+                ]
+              },
+              {
+                "modified_time": "2026-05-20T02:22:40Z",
+                "sha256": "c0ffe3887c093cd245be6407cffd38d98851d4c4aaae87dad81a0cbf9376e8a4",
+                "import_time": "2026-05-26T05:50:35.552335864Z",
+                "id": "IN-MAL-2026-003410",
+                "source": "amazon-inspector",
+                "versions": [
+                  "1.0.14"
+                ]
+              },
+              {
+                "modified_time": "2026-05-20T02:27:06Z",
+                "sha256": "de2bc8855ed757642753f9c434aaf3a48b1a8806176970046b851433c66ba154",
+                "import_time": "2026-05-26T05:50:36.085632616Z",
                 "id": "IN-MAL-2026-003415",
                 "source": "amazon-inspector",
-                "import_time": "2026-05-26T05:50:36.085632616Z"
+                "versions": [
+                  "1.0.17"
+                ]
               }
             ]
           },
@@ -5390,60 +5390,60 @@
                 "1.0.20"
               ],
               "database_specific": {
+                "cwes": [
+                  {
+                    "description": "The product contains code that appears to be malicious in nature.",
+                    "name": "Embedded Malicious Code",
+                    "cweId": "CWE-506"
+                  },
+                  {
+                    "description": "The product contains code that appears to be malicious in nature.",
+                    "name": "Embedded Malicious Code",
+                    "cweId": "CWE-506"
+                  },
+                  {
+                    "description": "The product contains code that appears to be malicious in nature.",
+                    "name": "Embedded Malicious Code",
+                    "cweId": "CWE-506"
+                  },
+                  {
+                    "description": "The product contains code that appears to be malicious in nature.",
+                    "name": "Embedded Malicious Code",
+                    "cweId": "CWE-506"
+                  },
+                  {
+                    "description": "The product contains code that appears to be malicious in nature.",
+                    "name": "Embedded Malicious Code",
+                    "cweId": "CWE-506"
+                  },
+                  {
+                    "description": "The product contains code that appears to be malicious in nature.",
+                    "name": "Embedded Malicious Code",
+                    "cweId": "CWE-506"
+                  }
+                ],
                 "indicators": {
+                  "domains": [
+                    "api.ipify.org",
+                    "b94b6bcfa27554.lhr.life"
+                  ],
                   "package_integrity": [
                     {
+                      "filename": "chalk-tempalte-1.0.17.tgz",
                       "hashes": {
                         "sha1": "de43a8c6ffd8984edfce333242997184360afe1e",
                         "sha512_sri": "sha512-LTXWiDvzVb76+cSz4H38Xgw58ZQrbY0eMVpoh3kBBGrflw5/yxogb066CZNNHgIDG4QInxxqowCHF3pKJH1X0A=="
-                      },
-                      "filename": "chalk-tempalte-1.0.17.tgz"
+                      }
                     }
                   ],
                   "evidence_files": [
                     {
-                      "tlsh": "218230a103f615650d63ddadeb4350016922d2433900b95c7fed6fc82f1b52eaaf2bb8",
                       "path": "postinstall.js",
-                      "sha256": "ffba9bdd6793edd5b38e12900252c1813a693f59c25af51c3b658cf3f27b6162"
+                      "sha256": "ffba9bdd6793edd5b38e12900252c1813a693f59c25af51c3b658cf3f27b6162",
+                      "tlsh": "218230a103f615650d63ddadeb4350016922d2433900b95c7fed6fc82f1b52eaaf2bb8"
                     }
-                  ],
-                  "domains": [
-                    "api.ipify.org",
-                    "b94b6bcfa27554.lhr.life"
                   ]
                 },
-                "cwes": [
-                  {
-                    "name": "Embedded Malicious Code",
-                    "cweId": "CWE-506",
-                    "description": "The product contains code that appears to be malicious in nature."
-                  },
-                  {
-                    "name": "Embedded Malicious Code",
-                    "cweId": "CWE-506",
-                    "description": "The product contains code that appears to be malicious in nature."
-                  },
-                  {
-                    "name": "Embedded Malicious Code",
-                    "cweId": "CWE-506",
-                    "description": "The product contains code that appears to be malicious in nature."
-                  },
-                  {
-                    "name": "Embedded Malicious Code",
-                    "cweId": "CWE-506",
-                    "description": "The product contains code that appears to be malicious in nature."
-                  },
-                  {
-                    "name": "Embedded Malicious Code",
-                    "cweId": "CWE-506",
-                    "description": "The product contains code that appears to be malicious in nature."
-                  },
-                  {
-                    "name": "Embedded Malicious Code",
-                    "cweId": "CWE-506",
-                    "description": "The product contains code that appears to be malicious in nature."
-                  }
-                ],
                 "source": "https://github.com/ossf/malicious-packages/blob/main/osv/malicious/npm/chalk-tempalte/MAL-2026-4517.json"
               }
             }
